@@ -1,5 +1,5 @@
 # Summary of [POJ](http://poj.org/problemlist) solutions
-Recorded according to problem category
+Recording according to [problem category](https://blog.csdn.net/lyy289065406/article/details/78702485)
 ## 基本算法
 ### 枚举
 #### 1. [1753 Flip Game](http://poj.org/problem?id=1753) / [Solution](https://github.com/HzhElena/OJ/blob/master/POJ%201753(%E6%9E%9A%E4%B8%BE).py)
