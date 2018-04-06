@@ -17,9 +17,8 @@ int LIS(int n)
             while(low<=high)
             {
                 int mid = (low + high) >> 1;
-                if(st[mid] > a[i]) high = mid-1;
-                else if(st[mid] < a[i]) low = mid+1;
-                else break;
+                if(st[mid] < a[i]) low = mid+1;
+                else high = mid-1;
             }
             st[low] = a[i];
         }
