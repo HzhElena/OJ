@@ -49,6 +49,13 @@ Recording according to [problem category](https://blog.csdn.net/lyy289065406/art
 
 * 典型的多重背包问题，按照模板写即可。
 * 此时cost和weight 均为 硬币值。
+#### 1. [3267 The Cow Lexicon](http://poj.org/problem?id=3267) / [Solution](https://github.com/HzhElena/POJ_solution/blob/master/POJ%203267(DP).cpp)
+> 给出一个长度为l的文本和一个由n个单词组成的字典。求至少从文本中去掉多少个字符才能使得这个文本全部由字典中的单词组成。
+
+* 思路: 转移方程为dp[i]=min(dp[i-1]+1,dp[pos+1]+i-pos-1-tmp);   其中dp[i]为前i个字符中需要去掉的字符数量。
+* 考虑每一个位置上向前匹配每一个字典中词所需要去掉字符的个数。
+* 注意字符串下标和动态规划循环下标+1的关系
+
 ### [背包问题](https://blog.csdn.net/stack_queue/article/details/53544109)
 #### 0/1 背包问题
 > 有N件物品和一个容量为V的背包。第i件物品的费用是c[i]，价值是w[i]。求解将哪些物品装入背包可使价值总和最大.
