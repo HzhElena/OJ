@@ -19,6 +19,12 @@ long double   128                   18~19                10^(-4
 
 可以直接用pow(n,1/p)  求 k.
 * **[高精度二分法](https://github.com/HzhElena/POJ_solution/blob/master/POJ%202109(Math2).cpp)** 仍然需要使用到 double，采用二分查找 k . 
+#### 3. [2389 Bull Math](http://poj.org/problem?id=2389) / [Solution]
+(https://github.com/HzhElena/POJ_solution/blob/master/POJ%202389.cpp)
+> 计算两大数乘积
+
+* 可以先乘后计算进位
+* res[pa+pb] += a[pa] * b[pb]
 ### 枚举
 #### 1. [1753 Flip Game](http://poj.org/problem?id=1753) / [Solution](https://github.com/HzhElena/OJ/blob/master/POJ%201753(%E6%9E%9A%E4%B8%BE).py)
 * 使用递归从反转0个棋子到1,2,...,16个逐步查找，如果可以达到目标状态则立刻返回步数。
