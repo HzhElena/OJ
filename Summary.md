@@ -1,6 +1,24 @@
 # Summary of [POJ](http://poj.org/problemlist) solutions
 Recording according to [problem category](https://blog.csdn.net/lyy289065406/article/details/78702485)
 ## 基本算法
+### 高精度算法
+#### 1. [1503 Integer Inquiry](http://poj.org/problem?id=1503) / [Solution](https://github.com/HzhElena/POJ_solution/blob/master/POJ%201503.cpp)
+> 求多个正数大数相加和
+
+* 使用数组和 len 逆序表示各数，逐个相加
+#### 2. [2109 Power of Cryptography](http://poj.org/problem?id=2109) / [Solution](https://github.com/HzhElena/POJ_solution/blob/master/POJ%202109(Math).cpp)
+> For all such pairs 1<=n<= 200, 1<=p<10101 and there exists an integer k, 1<=k<=109 such that k^n = p. 求 k
+
+* **[公式法]((https://github.com/HzhElena/POJ_solution/blob/master/POJ%202109(Math).cpp)):**  由于 C++ 中 double 范围有
+类型          长度 (bit)           有效数字          绝对值范围
+float             32                      6~7                  10^(-37) ~ 10^38
+
+double          64                     15~16               10^(-307) ~10^308
+
+long double   128                   18~19                10^(-4931) ~ 10 ^ 4932
+
+可以直接用pow(n,1/p)  求 k.
+* **[高精度二分法](https://github.com/HzhElena/POJ_solution/blob/master/POJ%202109(Math2).cpp)** 仍然需要使用到 double，采用二分查找 k . 
 ### 枚举
 #### 1. [1753 Flip Game](http://poj.org/problem?id=1753) / [Solution](https://github.com/HzhElena/OJ/blob/master/POJ%201753(%E6%9E%9A%E4%B8%BE).py)
 * 使用递归从反转0个棋子到1,2,...,16个逐步查找，如果可以达到目标状态则立刻返回步数。
