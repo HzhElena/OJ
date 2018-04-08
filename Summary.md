@@ -49,25 +49,34 @@ LIS的长度是6和 LIS为{10，22，33，50，60，80}。
 * **分析**: 分别从左向右，从右向左求LIS，然后枚举最长合法序列in = LIS_left + LIS_right，则n－in就是最少需要删除的数
 * 求最长递增序列可以用以上两种方法。记录以 i 结尾序列(可以不包括 i )的最长合法序列长度。
 
-#### 1. [1837 Balance](http://poj.org/problem?id=1837) / [Solution](https://github.com/HzhElena/POJ_solution/blob/master/POJ%201837(DP).cpp)
+#### 2. [1837 Balance](http://poj.org/problem?id=1837) / [Solution](https://github.com/HzhElena/POJ_solution/blob/master/POJ%201837(DP).cpp)
 > 给c（2<=c<=20）个挂钩，g（2<=g<=20）个砝码，求在将所有砝码（砝码重1~25）挂到天平(天平长  -15~15)上，并使得天平平衡的方法数.
 
 * 将g个挂钩挂上的极限值：15 * 25 * 20==7500.在有负数的情况下是-7500\~7500. 以0为平衡点,可以将平衡点往右移7500个单位，范围就是0\~15000.在有负数的以及要装入数组处理的题目中，我们都可以尝试着平移简化问题.
 * 每一各砝码均只可使用一次，为0/1背包问题
 * 首先我们先要明确dp数组的作用，dp[i][j]中，i为放置的砝码数量，j为平衡状态，0为平衡,j<0左倾，j>0右倾，由于j作为下标不能是负数，所以我们要找一个新的平衡点，因为15 * 20 * 20 = 7500，所以平衡点设置为7500。
 * 可以得出动态方程 dp[i][j+w[i]*c[k])+=dp[i-1][j];
-#### 1. [1276 Cash Machine](http://poj.org/problem?id=1276) / [Solution](https://github.com/HzhElena/POJ_solution/blob/master/POJ%201276(DP).cpp)
+#### 3. [1276 Cash Machine](http://poj.org/problem?id=1276) / [Solution](https://github.com/HzhElena/POJ_solution/blob/master/POJ%201276(DP).cpp)
 > 给出一个值cash，然后给出n，代表n个方案，接着n对代表个数与价值，要求使用硬币和最接近sum，但不超过sum的价值
 
 * 典型的多重背包问题，按照模板写即可。
 * 此时cost和weight 均为 硬币值。
-#### 1. [3267 The Cow Lexicon](http://poj.org/problem?id=3267) / [Solution](https://github.com/HzhElena/POJ_solution/blob/master/POJ%203267(DP).cpp)
+#### 4. [3267 The Cow Lexicon](http://poj.org/problem?id=3267) / [Solution](https://github.com/HzhElena/POJ_solution/blob/master/POJ%203267(DP).cpp)
 > 给出一个长度为l的文本和一个由n个单词组成的字典。求至少从文本中去掉多少个字符才能使得这个文本全部由字典中的单词组成。
 
 * 思路: 转移方程为dp[i]=min(dp[i-1]+1,dp[pos+1]+i-pos-1-tmp);   其中dp[i]为前i个字符中需要去掉的字符数量。
 * 考虑每一个位置上向前匹配每一个字典中词所需要去掉字符的个数。
 * 注意字符串下标和动态规划循环下标+1的关系
 
+#### 5. [1159 Palindrome](http://poj.org/problem?id=1159) / [Solution](https://github.com/HzhElena/POJ_solution/blob/master/POJ%201159(DP).cpp)
+> 给定字符串，求将该字符串变成回文串最小需要插入字符数
+
+* 求解思路: 构造该字符串的逆字符串，求两者最长公共子串。字符串长度-最长公共子串长度 为结果。
+* 相当于求该字符串的子回文串最大长度。
+* 错误：直接用dp 求字符串的 子回文串长度 WA dp[i][j] = max(dp[i+1][j-1]+2,dp[i][j]) (a[i] == b[j]) 
+* 正确：dp[i][j] = max(dp[i][j],dp[i-1][j-1]+1) (a[i] == b[j])
+        dp[i][j] = max(dp[i][j],dp[i-1][j])
+        dp[i][j] = max(dp[i][j],dp[i][j-1])
 ### [背包问题](https://blog.csdn.net/stack_queue/article/details/53544109)
 #### 0/1 背包问题
 > 有N件物品和一个容量为V的背包。第i件物品的费用是c[i]，价值是w[i]。求解将哪些物品装入背包可使价值总和最大.
