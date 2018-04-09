@@ -34,6 +34,13 @@ Output file should contain exactly N digits in a single line representing the su
 * 使用 int 存储数组，在读数以及输出时会超时。
 * 应该采用 char 存储数字。 if(num[i] >'9') num[i]-= 10; num[i-1] += 1 进行该运算以进位。整数的 %= 和 /= 需要 时间多，不可用。
 
+#### 5. [3982 序列](http://poj.org/problem?id=3982) / [Solution](https://github.com/HzhElena/POJ_solution/blob/master/POJ%203982.cpp)
+> 数列A满足An = An-1 + An-2 + An-3, n >= 3 . 编写程序，给定A0, A1 和 A2, 计算A99
+
+* 由于需要覆盖原来的值，使用数组比较复杂(清零问题)。可以直接用 char* 设置\0 为结尾标志。同时计算sum时，可以直接赋值。
+* 定义 add(char *a,char *b,char *c,char *ans)
+
+* 第一次计算 ans 为 A3。循环计算 25 次,即可在 ans 中得到 A99
 ### 枚举
 #### 1. [1753 Flip Game](http://poj.org/problem?id=1753) / [Solution](https://github.com/HzhElena/OJ/blob/master/POJ%201753(%E6%9E%9A%E4%B8%BE).cpp)
 * 使用递归从反转0个棋子到1,2,...,16个逐步查找，如果可以达到目标状态则立刻返回步数。
