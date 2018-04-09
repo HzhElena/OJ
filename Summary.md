@@ -7,6 +7,7 @@ Recording according to [problem category](https://blog.csdn.net/lyy289065406/art
 
 * 使用数组和 len 逆序表示各数，逐个相加
 #### 2. [2109 Power of Cryptography](http://poj.org/problem?id=2109) / [Solution](https://github.com/HzhElena/POJ_solution/blob/master/POJ%202109(Math).cpp)
+
 > For all such pairs 1<=n<= 200, 1<=p<10101 and there exists an integer k, 1<=k<=109 such that k^n = p. 求 k
 
 * **[公式法]((https://github.com/HzhElena/POJ_solution/blob/master/POJ%202109(Math).cpp)):**  由于 C++ 中 double 范围有
@@ -19,15 +20,13 @@ long double   128                   18~19                10^(-4
 
 可以直接用pow(n,1/p)  求 k.
 * **[高精度二分法](https://github.com/HzhElena/POJ_solution/blob/master/POJ%202109(Math2).cpp)** 仍然需要使用到 double，采用二分查找 k . 
-#### 3. [2389 Bull Math](http://poj.org/problem?id=2389) / [Solution]
-(https://github.com/HzhElena/POJ_solution/blob/master/POJ%202389.cpp)
+#### 3. [2389 Bull Math](http://poj.org/problem?id=2389) / [Solution](https://github.com/HzhElena/POJ_solution/blob/master/POJ%202389.cpp)
 > 计算两大数乘积
 
 * 可以先乘后计算进位
 * res[pa+pb] += a[pa] * b[pb]
 
-#### 4.[2602 Superlong sums](http://poj.org/problem?id=2602) / [Solution]
-(https://github.com/HzhElena/POJ_solution/blob/master/POJ%202602.cpp)
+#### 4.[2602 Superlong sums](http://poj.org/problem?id=2602) / [Solution](https://github.com/HzhElena/POJ_solution/blob/master/POJ%202602.cpp)
 > find the sum of two numbers with maximal size of 1.000.000 digits.
 Output file should contain exactly N digits in a single line representing the sum of these two integers.
 
@@ -36,12 +35,12 @@ Output file should contain exactly N digits in a single line representing the su
 * 应该采用 char 存储数字。 if(num[i] >'9') num[i]-= 10; num[i-1] += 1 进行该运算以进位。整数的 %= 和 /= 需要 时间多，不可用。
 
 ### 枚举
-#### 1. [1753 Flip Game](http://poj.org/problem?id=1753) / [Solution](https://github.com/HzhElena/OJ/blob/master/POJ%201753(%E6%9E%9A%E4%B8%BE).py)
+#### 1. [1753 Flip Game](http://poj.org/problem?id=1753) / [Solution](https://github.com/HzhElena/OJ/blob/master/POJ%201753(%E6%9E%9A%E4%B8%BE).cpp)
 * 使用递归从反转0个棋子到1,2,...,16个逐步查找，如果可以达到目标状态则立刻返回步数。
 * 使用 int 表示状态
 * 最多 2^16 状态，因此可以使用枚举法
 * 使用 [BFS](https://github.com/HzhElena/OJ/blob/master/POJ%202965(BFS).py) pre 指针记录路径会导致超时
-#### 1. [2965 The Pilots Brothers' refrigerator](http://poj.org/problem?id=2965) / [Solution](https://github.com/HzhElena/OJ/blob/master/POJ%202965(%E6%9E%9A%E4%B8%BE).py)
+#### 1. [2965 The Pilots Brothers' refrigerator](http://poj.org/problem?id=2965) / [Solution](https://github.com/HzhElena/OJ/blob/master/POJ%202965(%E6%9E%9A%E4%B8%BE).cpp)
 > 一个冰箱有4*4矩阵排列的一共16个把手(handles)，每个把手只有'+'(关)和'-'(开)两种状态，当且仅当开关全部为'-',也即冰箱把手都为开启状态的时候冰箱才能被打开。搬动冰箱把手定义一种翻转，即：每次随机选取一个把手翻动，则其所在行和所在列的一共7个把手全部翻转。现在给出16个把手的初始状态（至少有一个把手为'+'），求至少翻动多少轮次，才能够把冰箱门打开，也即把手状态全部为'-'。
 输出：达到冰箱开启，即全部把手状态为'-'的最小轮次。首行输出轮次，以下每行输出按次翻动的把手的行号和列号（之间用随意多个空格隔开即可）。
 
