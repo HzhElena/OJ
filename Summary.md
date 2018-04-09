@@ -25,6 +25,16 @@ long double   128                   18~19                10^(-4
 
 * 可以先乘后计算进位
 * res[pa+pb] += a[pa] * b[pb]
+
+#### 4.[2602 Superlong sums](http://poj.org/problem?id=2602) / [Solution]
+(https://github.com/HzhElena/POJ_solution/blob/master/POJ%202602.cpp)
+> find the sum of two numbers with maximal size of 1.000.000 digits.
+Output file should contain exactly N digits in a single line representing the sum of these two integers.
+
+* 使用 4 位数字作为数组中的元素时，由于会自动进位，导致错误。(输出要求与输入位数相同)
+* 使用 int 存储数组，在读数以及输出时会超时。
+* 应该采用 char 存储数字。 if(num[i] >'9') num[i]-= 10; num[i-1] += 1 进行该运算以进位。整数的 %= 和 /= 需要 时间多，不可用。
+
 ### 枚举
 #### 1. [1753 Flip Game](http://poj.org/problem?id=1753) / [Solution](https://github.com/HzhElena/OJ/blob/master/POJ%201753(%E6%9E%9A%E4%B8%BE).py)
 * 使用递归从反转0个棋子到1,2,...,16个逐步查找，如果可以达到目标状态则立刻返回步数。
