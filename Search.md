@@ -38,22 +38,43 @@
 * C++标准规定的是每个算术类型的最小存储空间，但其并不阻止编译器用更大的存储空间。如果要保证移植性，尽量用__int16 __int32 __int64吧，或者自己typedef int INT32一下。
 
 数据类型名称	字节数	别名	取值范围
+
 int	*	signed,signed int	由操作系统决定，即与操作系统的＂字长＂有关
+
 unsigned int	*	unsigned	由操作系统决定，即与操作系统的＂字长＂有关
+
 __int8	1	char,signed char	–128 到 127
+
 __int16	2	short,short int,signed short int	–32,768 到 32,767
+
 __int32	4	signed,signed int	–2,147,483,648 到 2,147,483,647
+
 __int64	8	无	–9,223,372,036,854,775,808 到 9,223,372,036,854,775,807
+
 bool	1	无	false 或 true
+
 char	1	signed char	–128 到 127
+
 unsigned char	1	无	0 到 255
+
 short	2	short int,signed short int	–32,768 到 32,767
+
 unsigned short	2	unsigned short int	0 到 65,535
+
 long	4	long int,signed long int	–2,147,483,648 到 2,147,483,647
+
 long long	8	none (but equivalent to __int64)	–9,223,372,036,854,775,808 到 9,223,372,036,854,775,807
+
 unsigned long	4	unsigned long int	0 到 4,294,967,295
+
 enum	*	无	由操作系统决定，即与操作系统的＂字长＂有关
+
 float	4	无	3.4E +/- 38 (7 digits)
+
 double	8	无	1.7E +/- 308 (15 digits)
+
 long double	8	无	1.7E +/- 308 (15 digits)
+
 wchar_t	2	__wchar_t	0 到 65,535
+
+
