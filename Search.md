@@ -34,7 +34,7 @@
 * 使用 DFS, 使用 BFS 超时。 
 * 搜索到含有20位时，回溯
 * 使用 unsigned __int64 强制指定类型为无符号64位. printf("%I64u\n",t); 在printf中%d用于int或者比int小的整数类型。比int小的类型被转型成int。
-%ld用于long类型，%lld用于long long类型。
+%ld用于long类型，%lld用于long long类型。 scanf double 用 %lf , printf double 用%f 。 scanf %f 为读取 float
 * C++标准规定的是每个算术类型的最小存储空间，但其并不阻止编译器用更大的存储空间。如果要保证移植性，尽量用__int16 __int32 __int64吧，或者自己typedef int INT32一下。
 
 数据类型名称	字节数	别名	取值范围
