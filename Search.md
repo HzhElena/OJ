@@ -95,3 +95,12 @@ wchar_t	2	__wchar_t	0 到 65,535
 
 #### 5. [2251 Dungeon Master](http://poj.org/problem?id=2251) / [Solution](https://github.com/HzhElena/POJ_solution/blob/master/POJ%202251(BFS).cpp)
 > 三维空间内，从 S 走到 E 最短路径
+
+#### 6. [2362 Square](http://poj.org/problem?id=2362) / [Solution](https://github.com/HzhElena/POJ_solution/blob/master/POJ%202251(BFS).cpp)
+> 给定若干根木棒，用所有的木棒是否可以拼成正方形？
+
+* 如果木棒数目没有到达四根，则为no
+* 比较容易想到的一点，如果当前木棒总长不是4的整数倍，则为no
+* 由于木棒不能这段，如果最长的木棒大于边长，则为no
+* 由于越短的木棒灵活性越高，进行快排之后由大至小进行搜索。
+* 为了避免重复搜索，我们默认组成同一边时，下一根取的木棒长度必定不大于当前根的木棒。故设置变量frm，即当前可取木棒长度的范围。
