@@ -77,4 +77,9 @@ long double	8	无	1.7E +/- 308 (15 digits)
 
 wchar_t	2	__wchar_t	0 到 65,535
 
+#### [3126 Prime Path](http://poj.org/problem?id=3126) / [Solution](https://github.com/HzhElena/POJ_solution/blob/master/POJ%203126(BFS).cpp)
+> 给定两个4位素数a b，求a变换到b最少需要几步，并且变换时只有一个数字不同，并且是素数
 
+* 由于求最短路径，用 BFS
+* 首先求出4位整数的 isprime 
+* BFS中 用vis和 isprime 剪枝
