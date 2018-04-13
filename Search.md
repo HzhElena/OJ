@@ -92,3 +92,6 @@ wchar_t	2	__wchar_t	0 到 65,535
 * 由于求最短路径，用 BFS
 * 由于需要输出操作路径, 可以在 node 里定义 *pre ，由于 node 的唯一性，可以确定 路径。需注意用到指针时，需要保存所有节点
 * 可以直接定义 pre_x[a][b] pre_y[a][b] 数组，每次保存上一个节点信息。
+
+#### 5. [2251 Dungeon Master](http://poj.org/problem?id=2251) / [Solution](https://github.com/HzhElena/POJ_solution/blob/master/POJ%202251(BFS).cpp)
+> 三维空间内，从 S 走到 E 最短路径
