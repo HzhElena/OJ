@@ -77,9 +77,18 @@ long double	8	无	1.7E +/- 308 (15 digits)
 
 wchar_t	2	__wchar_t	0 到 65,535
 
-#### [3126 Prime Path](http://poj.org/problem?id=3126) / [Solution](https://github.com/HzhElena/POJ_solution/blob/master/POJ%203126(BFS).cpp)
+#### 3. [3126 Prime Path](http://poj.org/problem?id=3126) / [Solution](https://github.com/HzhElena/POJ_solution/blob/master/POJ%203126(BFS).cpp)
 > 给定两个4位素数a b，求a变换到b最少需要几步，并且变换时只有一个数字不同，并且是素数
 
 * 由于求最短路径，用 BFS
 * 首先求出4位整数的 isprime 
 * BFS中 用vis和 isprime 剪枝
+
+#### 4. [3414 Pots](http://poj.org/problem?id=3414) / [Solution](https://github.com/HzhElena/POJ_solution/blob/master/POJ%203414(BFS).cpp)
+> 有二个水壶，对水壶有三种操作：1)FILL(i)，将i水壶的水填满；
+2)DROP(i)，将水壶i中的水全部倒掉；
+3)POUR(i,j)将水壶i中的水倒到水壶j中，若水壶 j 满了，则 i 剩下的就不倒了，问最少进行多少步操作，并且怎么操作，输出操作的步骤，两个水壶中的水可以达到C这个水量。如果不可能则输出impossible。初始时两个水壶是空的，没有水。 
+
+* 由于求最短路径，用 BFS
+* 由于需要输出操作路径, 可以在 node 里定义 *pre ，由于 node 的唯一性，可以确定 路径。需注意用到指针时，需要保存所有节点
+* 可以直接定义 pre_x[a][b] pre_y[a][b] 数组，每次保存上一个节点信息。
