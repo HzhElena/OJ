@@ -10,7 +10,8 @@
 ```+python
     memset(isprime,1,sizeof(isprime));
     isprime[1] = false;
-    for(int i=2;i<maxn;++i)
+    int m=(int)sqrt(maxn+0.5);
+    for(int i=2;i<m;++i)
     {
         if(isprime[i]){
             for(int j=2;j*i<maxn;++j)
