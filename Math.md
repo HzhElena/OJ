@@ -21,7 +21,20 @@
  ```
  
 #### 1. [Biorhythms](http://poj.org/problem?id=1006) / [Solution](https://github.com/HzhElena/POJ_solution/blob/master/POJ%201006.cpp)
-> 求满足 k%a == i1 k%b == i2 k%c == i3 的 最小k
+> 求满足 k%a == i1 k%b == i2 k%c == i3 的 最小k 
 
-* 中国剩余定理的使用
+* [中国剩余定理](https://blog.csdn.net/d_x_d/article/details/48467255)的使用，
+X被a,b,c处分别余r1,r2,r3。表示为：
+
+X%a = r1                     x%b = r2                     x%c = r3
+
+bc*k1 % a = 1     ac*k3 % b = 1     ab*k3 % c = 1
+
+所以
+
+x = bc * k1 * r1 + ac * k2 * r2 + ab * k3 * r3
+
+最后关于 x 对于a b c 的最小公倍数求余
+* 先求 bc 的倍数 使其关于 a 余1. 再乘以余数。 得到和后 求对于最小公倍数的余数。
+
  
