@@ -18,4 +18,10 @@
                 isprime[i*j] = false;
         }
     }
-```
+ ```
+ 
+#### 1. [Biorhythms](http://poj.org/problem?id=1006) / [Solution](https://github.com/HzhElena/POJ_solution/blob/master/POJ%201006.cpp)
+> 求满足 k%a == i1 k%b == i2 k%c == i3 的 最小k
+
+* 中国剩余定理的使用
+ 
