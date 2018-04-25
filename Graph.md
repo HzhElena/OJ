@@ -31,3 +31,8 @@
 > 可以从任意源点出发到达网络中所有节点的最短路径。
 
 * floyd 算法，注意多个测试用例时，每次需要初始化为INF
+
+#### 6. [2240  Arbitrage](http://poj.org/problem?id=2240) / [Solution](https://github.com/HzhElena/POJ_solution/blob/master/POJ%202240.cpp)
+> 能不能通过各个国家汇率的不同赚到比当初更多的钱。
+
+* 使用 bellmen-ford 判断环的存在
