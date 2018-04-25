@@ -21,10 +21,13 @@
 
 * 使用 dijkstra 算法，但是由于替换物品等级差不能超过M。需要枚举可以使用物品的区间，然后对于每一个区间使用 该算法进行计算。得到最小值即为最后解。
 
-#### 4. [2253  Frogger](http://poj.org/problem?id=2253) / [Solution](https://github.com/HzhElena/POJ_solution/blob/master/POJ%20253.cpp)
+#### 4. [2253  Frogger](http://poj.org/problem?id=2253) / [Solution](https://github.com/HzhElena/POJ_solution/blob/master/POJ%202253.cpp)
 > 寻找从出发点到终点所有路径中 路径中最长小段距离 最短的路径。
 
 * 单源最短路径变种。使用dijkstra算法，只需要将distance 更新原则进行改变
 * 原来是更新为距离最短，现在是更新为路径上最长边最短。
 
+#### 5. [1125  Stockbroker Grapevine](http://poj.org/problem?id=1125) / [Solution](https://github.com/HzhElena/POJ_solution/blob/master/POJ%201125.cpp)
+> 可以从任意源点出发到达网络中所有节点的最短路径。
 
+* floyd 算法，注意多个测试用例时，每次需要初始化为INF
