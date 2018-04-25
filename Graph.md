@@ -36,3 +36,8 @@
 > 能不能通过各个国家汇率的不同赚到比当初更多的钱。
 
 * 使用 bellmen-ford 判断环的存在
+
+#### 7. [1789  Truck History](http://poj.org/problem?id=1789) / [Solution](https://github.com/HzhElena/POJ_solution/blob/master/POJ%201789.cpp)
+> 最小生成树
+
+* 使用 prime 算法，每次加入当前已经visit 过点到 未 visit 过点的最短距离点。 直到将所有点遍历为止。
