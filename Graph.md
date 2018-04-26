@@ -41,3 +41,8 @@
 > 最小生成树
 
 * 使用 prime 算法，每次加入当前已经visit 过点到 未 visit 过点的最短距离点。 直到将所有点遍历为止。
+
+#### 8. [2485  Highways](http://poj.org/problem?id=2485) / [Solution](https://github.com/HzhElena/POJ_solution/blob/master/POJ%202485.cpp)
+> 最小生成树的最大边
+
+* Prime算法
